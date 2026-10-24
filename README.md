@@ -66,6 +66,13 @@ A finding without a precise failure mode is noise. Every candidate finding gets:
 3. Why existing protections (checks, roles, pauses) fail to prevent it
 4. A severity honest enough to survive triage — overstated severities burn reviewer credibility faster than missed low-sev issues
 
+## Pattern Notes (docs/)
+
+Concrete pattern write-ups extracted from the codebases below — what the pattern is, and what to check when you meet it:
+
+- [Bad-Debt Socialization via Earnings Accumulator](docs/pattern-bad-debt-socialization.md) — Exactly's `clearBadDebt`: partial-clear skip semantics, rounding on yield routing, Auditor trust concentration, and the three bad-debt endgames compared.
+- [Remaining-Amount Invalidator](docs/pattern-remaining-invalidator.md) — 1inch's `RemainingInvalidatorLib`: one uint256 encoding lifecycle + quantity, arithmetic-convergence sentinels, and the overload failure-mode trap.
+
 ## Codebases Worked
 
 Full read-throughs (primary contracts, comment-level): The Graph L1 staking/disputes/curation suite (~5,500 LOC), Exactly protocol markets/auditor (~1,700), 1inch limit-order contracts (~700), 0xIntuition MultiVault/AtomWallet/TrustBonding suite (~3,600), plus supporting adapters and routers.
