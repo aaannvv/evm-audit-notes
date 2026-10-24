@@ -72,6 +72,7 @@ Concrete pattern write-ups extracted from the codebases below — what the patte
 
 - [Bad-Debt Socialization via Earnings Accumulator](docs/pattern-bad-debt-socialization.md) — Exactly's `clearBadDebt`: partial-clear skip semantics, rounding on yield routing, Auditor trust concentration, and the three bad-debt endgames compared.
 - [Remaining-Amount Invalidator](docs/pattern-remaining-invalidator.md) — 1inch's `RemainingInvalidatorLib`: one uint256 encoding lifecycle + quantity, arithmetic-convergence sentinels, and the overload failure-mode trap.
+- [Bridge-Fee Pre-Quote on a Representative Amount](docs/pattern-bridge-fee-prequote.md) — Intuition's `TrustSwapAndBridgeRouter`: assumptions imported from docs, quote-then-act races, fee/refund plumbing as one unit, and the minOut dual-role trap.
 
 ## Codebases Worked
 
