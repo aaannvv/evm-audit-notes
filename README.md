@@ -73,10 +73,11 @@ Concrete pattern write-ups extracted from the codebases below — what the patte
 - [Bad-Debt Socialization via Earnings Accumulator](docs/pattern-bad-debt-socialization.md) — Exactly's `clearBadDebt`: partial-clear skip semantics, rounding on yield routing, Auditor trust concentration, and the three bad-debt endgames compared.
 - [Remaining-Amount Invalidator](docs/pattern-remaining-invalidator.md) — 1inch's `RemainingInvalidatorLib`: one uint256 encoding lifecycle + quantity, arithmetic-convergence sentinels, and the overload failure-mode trap.
 - [Bridge-Fee Pre-Quote on a Representative Amount](docs/pattern-bridge-fee-prequote.md) — Intuition's `TrustSwapAndBridgeRouter`: assumptions imported from docs, quote-then-act races, fee/refund plumbing as one unit, and the minOut dual-role trap.
+- [Auditing a Heavily-Reviewed Contest Codebase](docs/pattern-contest-audit-method.md) — the five-check method for codebases that already survived multiple audits: repair-trace markers, mirror-consistency tables, branch-unreachability proofs, rounding lints, and the pace rule.
 
 ## Codebases Worked
 
-Full read-throughs (primary contracts, comment-level): The Graph L1 staking/disputes/curation suite (~5,500 LOC), Exactly protocol markets/auditor (~1,700), 1inch limit-order contracts (~700), 0xIntuition MultiVault/AtomWallet/TrustBonding suite (~3,600), plus supporting adapters and routers.
+Full read-throughs (primary contracts, comment-level): The Graph L1 staking/disputes/curation suite (~5,500 LOC), Exactly protocol markets/auditor (~1,700), 1inch limit-order contracts (~700), 0xIntuition MultiVault/AtomWallet/TrustBonding suite (~3,600), Revert v4lend vault/oracle/fees (~3,600, live contest pass), plus supporting adapters and routers.
 
 ---
 
